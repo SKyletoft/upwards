@@ -6,3 +6,12 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+
+# Just try to make the binary as small as possible
+[profile.release]
+strip = "debuginfo"
+lto = "fat"
+opt-level = "s"
+debug = false
+codegen-units = 1
+overflow-checks = false
