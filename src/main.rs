@@ -13,4 +13,5 @@ fn main() {
 	for segment in segments.iter().rev().filter_map(|p| p.to_str()) {
 		print!("{} ", segment);
 	}
+	println!();
 }
